@@ -2,7 +2,7 @@
 
 **Author**: Anagha Rao  
 **Organization**: UW-GDA  
-**Repository**: [CellTowerOptimizer](https://github.com/UW-GDA/CellTowerOptimizer)  
+**Repository**: [ConnectivityMapper](https://github.com/bobaplex/ConnectivityMapper?tab=readme-ov-file)  
 
 ---
 
