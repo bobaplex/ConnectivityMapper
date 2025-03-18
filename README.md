@@ -26,9 +26,9 @@ With the increasing demand for seamless connectivity, telecom companies face cha
 ---
 
 ## Datasets  
-1. **Terrain Data**: Elevation and land cover data from [USGS](https://www.usgs.gov/).  
+1. **Terrain Data**: Elevation and land cover data from [OpenTopography API](https://opentopography.org/).  
 2. **Connectivity Data**: Signal strength maps and tower locations from [FCC](https://www.fcc.gov/). Cellular data from [ARCGIS Hub](https://hub.arcgis.com/datasets/geoplatform::cellular-towers/explore?location=2.226280%2C-18.957773%2C1.50)
-3. **Demographics**: Population density and income levels from [Census Bureau](https://www.census.gov/).  
+3. **Demographics**: Population density (weighted and unweighted) from [WorldPOP Hub](https://hub.worldpop.org/geodata/summary?id=50575)  
 4. **Infrastructure Costs**: Land prices and construction costs (to be sourced from public datasets or estimates).  
 
 ---
