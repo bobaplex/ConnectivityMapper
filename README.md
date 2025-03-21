@@ -27,8 +27,8 @@ With the increasing demand for seamless connectivity, telecom companies face cha
 
 ## Datasets  
 1. **Terrain Data**: Elevation and land cover data from [OpenTopography API](https://opentopography.org/).  
-2. **Connectivity Data**: Signal strength maps and tower locations from [FCC](https://www.fcc.gov/). Cellular data from [ARCGIS Hub](https://hub.arcgis.com/datasets/geoplatform::cellular-towers/explore?location=2.226280%2C-18.957773%2C1.50)
-3. **Demographics**: Population density (weighted and unweighted) from [WorldPOP Hub](https://hub.worldpop.org/geodata/summary?id=50575)  
+2. **Connectivity Data**: Signal strength maps and tower locations from [FCC](https://www.fcc.gov/). Cellular data from [ARCGIS Hub](https://hub.arcgis.com/datasets/geoplatform::cellular-towers/explore?location=2.226280%2C-18.957773%2C1.50).  
+3. **Demographics**: Population density (weighted and unweighted) from [WorldPOP Hub](https://hub.worldpop.org/geodata/summary?id=50575).  
 4. **Infrastructure Costs**: Land prices and construction costs (to be sourced from public datasets or estimates).  
 
 ---
@@ -47,17 +47,42 @@ With the increasing demand for seamless connectivity, telecom companies face cha
 
 ## Methodology  
 1. **Data Collection**: Gather terrain, connectivity, and demographic datasets.  
-2. **Feature Engineering**: Create features like terrain ruggedness, coverage gaps, and population density.  
-3. **Model Development**: Train an ML model to predict ROI and user demand for potential tower locations.  
-4. **Optimization**: Use the model to recommend optimal tower placements.  
-5. **Visualization**: Create interactive maps to showcase results.  
+2. **Feature Engineering**:  
+   - Extract **elevation** and **slope** from DEM.  
+   - Calculate **distance to nearest tower** and **coverage overlap**.  
+   - Add **population density** (weighted and unweighted) and **income levels**.  
+3. **Model Development**:  
+   - Train an **XGBoost model** to predict **user demand** and **ROI**.  
+   - Use **SHAP values** to interpret feature importance.  
+4. **Optimization**:  
+   - Rank potential tower locations based on predicted ROI and coverage.  
+5. **Visualization**:  
+   - Create **interactive maps** to showcase recommended placements.  
+   - Generate **charts** comparing predicted ROI for different regions.  
 
 ---
 
-## Expected Outcomes  
-- A machine learning model that predicts ROI and user demand for cell tower locations.  
-- A ranked list of optimal tower placements with associated metrics (e.g., expected users, cost, ROI).  
-- Interactive visualizations of coverage improvements and recommended placements.  
+## Results  
+- **Optimal Tower Locations**: Identified top 5 locations with high predicted user demand and ROI.  
+- **Improved Coverage**: Demonstrated how optimized placement can bridge coverage gaps in rural areas.  
+- **Cost Savings**: Showed how data-driven decisions can minimize infrastructure costs.  
+
+---
+
+## Conclusions  
+- The model successfully identifies **optimal tower locations** using geospatial and demographic data.  
+- **Population density** and **terrain features** are the most important factors in predicting user demand.  
+
+---
+
+## Future Directions  
+1. **Incorporate Additional Data**:  
+   - Add **income data** to refine ROI predictions.  
+   - Include **real-time data** (e.g., network usage, weather) for dynamic optimization.  
+2. **Consumer-Centric Design**:  
+   - Go beyond income and consider **consumer preferences** (e.g., data usage patterns, service expectations).  
+3. **Expand Applications**:  
+   - Apply the model to other industries, such as **IoT** or **smart city planning**.  
 
 ---
 
